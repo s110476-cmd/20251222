@@ -306,7 +306,7 @@ function draw() {
         textSize(40);
         text('恭喜通關！', width / 2, height / 2 - 60);
         textSize(30);
-        text('總分: ' + score, width / 2, height / 2);
+        text('得分: ' + score + '/60', width / 2, height / 2);
         let elapsed = (finalTime - startTime) / 1000;
         text('總時間: ' + nf(elapsed, 1, 1) + ' 秒', width / 2, height / 2 + 60);
         replayButton.show();
@@ -381,7 +381,7 @@ function draw() {
     // --- 2. Dialogue and Input Logic ---
     let textToShow = "";
     const characterHeight = (isNear ? smileFrameH : stopFrameH) * scaleFactor;
-    const textY = npcPosY - characterHeight / 2 - 10;
+    const textY = npcPosY - characterHeight / 2 - 130;
     
     if (isNear && !isTransitioningLevel) {
         textToShow = feedbackText || (currentQuestion ? currentQuestion.question : "Loading...");
