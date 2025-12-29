@@ -381,7 +381,7 @@ function draw() {
     // --- 2. Dialogue and Input Logic ---
     let textToShow = "";
     const characterHeight = (isNear ? smileFrameH : stopFrameH) * scaleFactor;
-    const textY = npcPosY - characterHeight / 2 - 130;
+    const textY = npcPosY - characterHeight / 2 - 100;
     
     if (isNear && !isTransitioningLevel) {
         textToShow = feedbackText || (currentQuestion ? currentQuestion.question : "Loading...");
